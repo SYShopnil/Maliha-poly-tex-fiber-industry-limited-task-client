@@ -2,7 +2,7 @@
 import { LoginController } from "@src/lib/login-handler";
 import { Button } from "@src/components/root";
 import { BtnColorSchema } from "@src/types/root";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FormData } from "@src/types/compound/c-login-form-with-submit";
 import { EDataTestId } from "@src/types/common";
 
@@ -29,6 +29,23 @@ export const CLoginFormWithSubmit = () => {
       setPayload("Somethings went wrong");
     }
   };
+
+  // on press enter it will fired the login controller
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("keydown", async (e) => {
+        if (e.key === "Enter") {
+          setIsLoading(true);
+          e.preventDefault();
+          try {
+            await LoginController(formData);
+          } catch (err) {
+            setPayload("Somethings went wrong");
+          }
+        }
+      });
+    }
+  }, []);
 
   return (
     <div

@@ -7,8 +7,7 @@ export interface IMenuItem {
 
 export enum DashboardMenuItem {
   Profile = "Profile",
-  Products = "Products",
-  UserList = "UserList",
+  MyTextBox = "MyTextBox",
 }
 export const menuItems: IMenuItem[] = [
   {
@@ -18,14 +17,8 @@ export const menuItems: IMenuItem[] = [
     access: ["admin", "user"],
   },
   {
-    url: "/dashboard/userList",
-    title: DashboardMenuItem.UserList,
-    isActive: false,
-    access: ["admin"],
-  },
-  {
-    url: "/dashboard/products",
-    title: DashboardMenuItem.Products,
+    url: "/dashboard/text-box",
+    title: DashboardMenuItem.MyTextBox,
     isActive: false,
     access: ["admin", "user"],
   },
