@@ -1,4 +1,3 @@
-import { Authorization } from "@src/lib/authorization";
 import { SProfile } from "@src/components/compound";
 import { SLoading } from "@src/components/root";
 import { Suspense } from "react";
