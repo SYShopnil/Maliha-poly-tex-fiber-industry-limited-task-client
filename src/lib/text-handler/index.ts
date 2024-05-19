@@ -5,20 +5,50 @@ import {
   ITextBoxData,
   ITextDataElements,
 } from "@src/types/compound/s-show-all-texts-boxs-type";
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 export async function addNewTextListServerAction(
   elements: ITextDataElements[]
 ) {
-  const redirectPath = "";
+  let redirectPath = "";
   try {
-    console.log(elements);
+    const cookiesStore = cookies();
+    const getAuthToken = cookiesStore.get("auth"); //this toke should be a decrypted jwt token
+    const autToken = getAuthToken?.value && getAuthToken.value;
+    const res = await fetch(`${process.env.SERVER_BASE_URL}/text/add`, {
+      method: "POST",
+      credentials: "include",
+      body: JSON.stringify(elements),
+      headers: {
+        "content-type": "application/json",
+        Authorization: `${autToken}`, // Set the JWT token in the Authorization header
+      },
+    });
+    if (!res.ok) {
+      console.log(`error given`);
+      return {
+        message: "Fetch Error",
+        payload: null,
+      };
+    }
+    const { status } = await res.json();
+    if (status == 201) {
+      redirect = "/dashboard/text-box"
+    } else {
+      return {
+        message: "Text Creation Failed",
+        payload: null,
+      };
+    }
   } catch (err) {
     console.log(err);
+    return {
+      message: "Internal Error",
+      payload: null,
+    };
   } finally {
     if (redirectPath) {
-    } else {
-      redirect("/");
     }
   }
 }

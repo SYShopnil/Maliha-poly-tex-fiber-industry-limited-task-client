@@ -102,19 +102,6 @@ export async function LoginController({
   }
 }
 
-// export async function getSession() {
-// const res = await fetch("http://localhost:3030/auth/session", {
-//   method: "GET",
-//   credentials: "include",
-//   headers: {
-//     "content-type": "application/json",
-//     Authorization: `${cookieStore.get("auth")?.value}`, // Set the JWT token in the Authorization header
-//   },
-// });
-
-//   console.log(await res.json());
-// }
-
 export async function logoutController() {
   const cookieStore = cookies();
   let redirectUrl: string = "";
