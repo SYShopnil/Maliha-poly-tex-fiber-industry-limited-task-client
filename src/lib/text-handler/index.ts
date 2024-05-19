@@ -19,7 +19,7 @@ export async function addNewTextListServerAction(
     const res = await fetch(`${process.env.SERVER_BASE_URL}/text/add`, {
       method: "POST",
       credentials: "include",
-      body: JSON.stringify(elements),
+      body: JSON.stringify({ payload: elements }),
       headers: {
         "content-type": "application/json",
         Authorization: `${autToken}`, // Set the JWT token in the Authorization header
@@ -33,8 +33,9 @@ export async function addNewTextListServerAction(
       };
     }
     const { status } = await res.json();
+    console.log({ status });
     if (status == 201) {
-      redirect = "/dashboard/text-box"
+      redirectPath = "/dashboard/text-box";
     } else {
       return {
         message: "Text Creation Failed",
@@ -49,6 +50,7 @@ export async function addNewTextListServerAction(
     };
   } finally {
     if (redirectPath) {
+      redirect(redirectPath);
     }
   }
 }
@@ -71,12 +73,40 @@ interface IGetAllLoggedInUserTextListFromServerResponse {
 
 export async function getAllLoggedInUserTextListFromServer(): Promise<IGetAllLoggedInUserTextListFromServerResponse> {
   try {
-    const fetchedTextData: ITextBoxData[] = demoData;
-    return {
-      message: "Test Running",
-      status: 202,
-      payload: fetchedTextData,
-    };
+    const cookiesStore = cookies();
+    const getAuthToken = cookiesStore.get("auth"); //this toke should be a decrypted jwt token
+    const autToken = getAuthToken?.value && getAuthToken.value;
+
+    const res = await fetch(`${process.env.SERVER_BASE_URL}/text/get/all`, {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "content-type": "application/json",
+        Authorization: `${autToken}`, // Set the JWT token in the Authorization header
+      },
+    });
+    if (!res.ok) {
+      console.log(`error given`);
+      return {
+        message: "Fetch Error",
+        status: 202,
+        payload: [],
+      };
+    }
+    const { message, payload, status } = await res.json();
+    if (status == 200) {
+      return {
+        message,
+        status: 200,
+        payload,
+      };
+    } else {
+      return {
+        message,
+        status: 404,
+        payload: [],
+      };
+    }
   } catch (err) {
     console.log(err);
     return {
