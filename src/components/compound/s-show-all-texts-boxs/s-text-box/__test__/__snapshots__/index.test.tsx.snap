@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When Text Box Component Rendered Expect render successfully 1`] = `
+<div
+  class="bg-white shadow-lg rounded-lg p-6 border border-gray-200 col-span-12 md:col-span-6 lg:col-span-4"
+  role="STextBox"
+>
+  <p
+    class="text-blue-600 font-bold mb-2"
+  >
+    Text ID: 
+    123456
+  </p>
+  <p
+    class="text-gray-700 mb-4"
+  >
+    Total Amount: 
+    2500
+  </p>
+  <div
+    class="flex justify-between"
+  >
+    <span
+      class="cursor-pointer"
+      role="CButton"
+    >
+      <span
+        class="flex justify-center items-center  "
+      >
+        <span
+          class="text-base md:text-base_2  flex justify-center items-center px-[1rem] py-[0.5rem] rounded-[0.563rem] w-[100%] h-[100%] bg-[#EDEDED] hover:bg-[#7A67EE]  duration-[0.5s] text-[#7A67EE] hover:text-[#EDEDED]   border-[0.063rem] hover:border-[#EDEDED] border-[#7A67EE]   "
+        >
+          <span>
+            View Details
+          </span>
+        </span>
+      </span>
+    </span>
+    <span
+      class="cursor-pointer"
+      role="CButton"
+    >
+      <span
+        class="flex justify-center items-center  "
+      >
+        <span
+          class="text-base md:text-base_2  flex justify-center items-center px-[1rem] py-[0.5rem] rounded-[0.563rem] w-[100%] h-[100%] bg-[#EBF5EC] hover:bg-[#7F4D4F]  duration-[0.5s] text-[#7F4D4F] hover:text-[#EBF5EC]   border-[0.063rem] hover:border-[#EBF5EC] border-[#7F4D4F]   "
+        >
+          <span>
+            Update
+          </span>
+        </span>
+      </span>
+    </span>
+  </div>
+</div>
+`;

@@ -1,9 +1,13 @@
+import { EDataTestId } from "@src/types/common";
 import React from "react";
 
 export const STextCardSkelton = () => {
   const counter = new Array(9).fill(0);
   return (
-    <div className={`grid grid-cols-12 gap-2`}>
+    <div
+      className={`grid grid-cols-12 gap-2`}
+      role={EDataTestId.STextCardSkelton}
+    >
       {counter.map((_, ind) => {
         return (
           <div

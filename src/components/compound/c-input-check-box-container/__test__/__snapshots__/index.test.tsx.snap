@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When Input Check Box Component Rendered Expect render successfully 1`] = `
+<div
+  role="CAddNewText"
+>
+  <div>
+    <div
+      class="mb-4 grid grid-cols-12 gap-3"
+    >
+      <input
+        class="px-2 py-1 border rounded mr-2 w-[100%] lg:col-span-8 col-span-4"
+        type="number"
+        value="0"
+      />
+      <button
+        class="px-4 py-2 bg-blue-500 text-white rounded lg:col-span-4 col-span-8 lg:text-lg text-sm"
+      >
+        Add To Text boxes
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      class="flex items-center my-2 space-x-4"
+    >
+      <input
+        class="mr-2 h-[1.5rem] w-[1.5rem]"
+        type="checkbox"
+      />
+      <div
+        class="bg-[#FFE6CC]  w-[100%] flex justify-center item-center p-2"
+      >
+        <p
+          class="text-lg font-bold "
+        >
+          All Select
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mt-4"
+  >
+    <div
+      class="border-[2px] border-solid p-2 text-center bg-[#E1D5E7]"
+    >
+      <p>
+        Selected all
+         
+        <strong>
+          0
+           
+          Item
+        </strong>
+         and total number is
+         
+        <strong>
+          0
+        </strong>
+      </p>
+    </div>
+    <div
+      class="flex justify-end items-start mt-3"
+    >
+      <span
+        class="cursor-pointer"
+        role="CButton"
+      >
+        <span
+          class="flex justify-center items-center  "
+        >
+          <span
+            class="text-base md:text-base_2  flex justify-center items-center px-[1rem] py-[0.5rem] rounded-[0.563rem] w-[100%] h-[100%] bg-[#EDEDED] hover:bg-[#7A67EE]  duration-[0.5s] text-[#7A67EE] hover:text-[#EDEDED]   border-[0.063rem] hover:border-[#EDEDED] border-[#7A67EE]   "
+          >
+            <span />
+          </span>
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;

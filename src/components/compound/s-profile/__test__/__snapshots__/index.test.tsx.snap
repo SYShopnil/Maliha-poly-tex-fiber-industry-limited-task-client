@@ -2,7 +2,7 @@
 
 exports[`When Profile has rendered Expect render successfully 1`] = `
 <div
-  data-testid="SProfile"
+  role="SProfile"
 >
   No User Found!!!
 </div>

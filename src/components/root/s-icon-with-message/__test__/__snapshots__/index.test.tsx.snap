@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When icon with message component has rendered Expect render successfully 1`] = `
+<div
+  class="h-[60vh] flex justify-center items-center space-x-2"
+  role="SIconWithMessage"
+>
+  <div>
+    <svg
+      fill="#7F4D4F"
+      height="1em"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+        stroke="none"
+      />
+      <path
+        d="M3 7v4a1 1 0 0 0 1 1h3"
+      />
+      <path
+        d="M7 7v10"
+      />
+      <path
+        d="M10 8v8a1 1 0 0 0 1 1h2a1 1 0 0 0 1 -1v-8a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1z"
+      />
+      <path
+        d="M17 7v4a1 1 0 0 0 1 1h3"
+      />
+      <path
+        d="M21 7v10"
+      />
+    </svg>
+  </div>
+  <div>
+    <p
+      class="font-bold"
+    >
+      Somethings Error
+    </p>
+  </div>
+  <div
+    class="!ml-8 "
+  >
+    <a
+      class="text-[#7F4D4F] hover:text-black duration-[0.2s] font-bold"
+    >
+      <a
+        href="/"
+      >
+        Click Me
+      </a>
+    </a>
+  </div>
+</div>
+`;

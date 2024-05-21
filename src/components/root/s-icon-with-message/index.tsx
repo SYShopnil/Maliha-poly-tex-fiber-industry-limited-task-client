@@ -2,10 +2,14 @@ import React from "react";
 import { SIconStore } from "../_icon";
 import { IRIconWithMessage } from "@src/types/root/s-icon-with-message";
 import Link from "next/link";
+import { EDataTestId } from "@src/types/common";
 
 export const SIconWithMessage = ({ icon, message }: IRIconWithMessage) => {
   return (
-    <div className={`h-[60vh] flex justify-center items-center space-x-2`}>
+    <div
+      className={`h-[60vh] flex justify-center items-center space-x-2`}
+      role={EDataTestId.SIconWithMessage}
+    >
       <div>
         <SIconStore iconName={icon} fill={"#7F4D4F"} />
       </div>

@@ -2,13 +2,14 @@ import React from "react";
 import { STextBox } from "./s-text-box";
 import { getAllLoggedInUserTextListFromServer } from "@src/lib/text-handler";
 import { SLoading } from "@src/components/root";
+import { EDataTestId } from "@src/types/common";
 
 export const SShowAllTextBox = async () => {
   //here all loggedInUser text box will be fetch from database
   const { payload } = await getAllLoggedInUserTextListFromServer();
 
   return (
-    <div>
+    <div role={EDataTestId.SShowAllTextBox}>
       {/* card part */}
       {payload.length ? (
         <div className={`grid grid-cols-12 gap-2`}>

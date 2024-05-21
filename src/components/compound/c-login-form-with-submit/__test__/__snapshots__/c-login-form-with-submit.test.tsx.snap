@@ -3,7 +3,7 @@
 exports[`When Clone Form with submit rendered  Expect it should render successfully 1`] = `
 <div
   class="flex justify-center items-center h-[80vh] bg-gray-100"
-  data-testid="cLoginFormWithSubmit"
+  role="cLoginFormWithSubmit"
 >
   <form
     class="bg-white p-8 rounded shadow-md"
@@ -51,6 +51,7 @@ exports[`When Clone Form with submit rendered  Expect it should render successfu
     </div>
     <span
       class="cursor-pointer"
+      role="CButton"
     >
       <span
         class="flex justify-center items-center  "

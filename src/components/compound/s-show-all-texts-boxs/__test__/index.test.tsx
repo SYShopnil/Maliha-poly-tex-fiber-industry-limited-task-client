@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import { SProfile } from "..";
 import { EDataTestId } from "@src/types/common";
+import { SShowAllTextBox } from "..";
 
-describe("When Profile has rendered", () => {
+describe("When Input Check Box Component Rendered", () => {
   it("Expect render successfully", async () => {
-    render(await SProfile());
-    const myElement = screen.getByRole(EDataTestId.SProfile);
+    render(await SShowAllTextBox());
+    const myElement = screen.getByRole(EDataTestId.SShowAllTextBox);
     expect(myElement).toMatchSnapshot();
   });
 });

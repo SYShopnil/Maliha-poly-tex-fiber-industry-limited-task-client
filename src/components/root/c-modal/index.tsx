@@ -1,4 +1,5 @@
 "use client";
+import { EDataTestId } from "@src/types/common";
 import { IModal } from "@src/types/root/c-modal";
 import React, { useState, useEffect } from "react";
 
@@ -23,6 +24,7 @@ export const CModal = ({ show, onClose, children }: IModal) => {
         show && shouldAnimate ? "opacity-100" : "opacity-0"
       }`}
       onClick={onClose}
+      role={EDataTestId.CModal}
     >
       <div
         className="bg-white p-4 rounded shadow-lg transition-transform duration-300 overflow-x-hidden overflow-y-scroll max-h-[80vh] w-[65%]"

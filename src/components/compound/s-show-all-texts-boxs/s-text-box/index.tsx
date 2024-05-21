@@ -9,6 +9,7 @@ import { CInputCheckBoxContainer } from "../../c-input-check-box-container";
 import { ECInputCheckBoxContainerMode } from "@src/types/compound/c-input-check-box-container";
 import { ITextDataElements } from "@src/types/compound/s-show-all-texts-boxs-type";
 import { updateTextListOfLoggedInUserServerAction } from "@src/lib/text-handler";
+import { EDataTestId } from "@src/types/common";
 
 export const STextBox = ({ elements, textId, total }: ITextBoxData) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -39,7 +40,10 @@ export const STextBox = ({ elements, textId, total }: ITextBoxData) => {
     }
   };
   return (
-    <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200 col-span-12 md:col-span-6 lg:col-span-4">
+    <div
+      role={EDataTestId.STextBox}
+      className="bg-white shadow-lg rounded-lg p-6 border border-gray-200 col-span-12 md:col-span-6 lg:col-span-4"
+    >
       <p className="text-blue-600 font-bold mb-2">Text ID: {textId}</p>
       <p className="text-gray-700 mb-4">Total Amount: {total}</p>
       <div className="flex justify-between">

@@ -14,33 +14,33 @@
   <img src = "public/doc/demo/loginFormPage.png"  >
 
 - **Profile page of User**
-  <img src = "public/doc/demo/profilePageOne.png"  >
+  <img src = "public/doc/demo/my_profile.png"  >
 
-- **Profile page of Admin**
-  <img src = "public/doc/demo/profilePageTwo.png"  >
+- **Show All Text Card**
+  <img src = "public/doc/demo/my_text_card.png"  >
 
-- **All Product Page**
-  <img src = "public/doc/demo/showAllProductPage.png"  >
+- **Add New Text**
+  <img src = "public/doc/demo/create_new_text.png"  >
 
-- **Single Product Page**
-  <img src = "public/doc/demo/singleProductPage.png"  >
+- **Update existing card element with add new or delete also**
+  <img src = "public/doc/demo/update_text_element.png >
 
-- **User List Page**
-  <img src = "public/doc/demo/userListPage.png"  >
+- **View individual text element details**
+  <img src = "public/doc/demo/read_text_element.png >
 
 ## Run Locally
 
 Clone the project
 
 ```bash
-  git clone https://github.com/SYShopnil/ATPL-Task.git
+  git clone https://github.com/SYShopnil/Maliha-poly-tex-fiber-industry-limited-task-client.git
 ```
 
 Go to the project directory
 
 ```bash
   cd
-  ATPL-Task
+  Maliha-poly-tex-fiber-industry-limited-task-client
 ```
 
 Install dependencies
@@ -60,6 +60,11 @@ Start the Test
 ```bash
   npm run test
 ```
+
+## Test User
+
+- email: johndoe@gmail.com
+- password: 123456789John@
 
 ## Support
 

@@ -3,6 +3,7 @@ import React from "react";
 import { Button } from "../button";
 import { BtnColorSchema } from "@src/types/root";
 import { logoutController } from "@src/lib/login-handler";
+import { EDataTestId } from "@src/types/common";
 
 const CLogout = () => {
   const logoutHandler = async () => {
@@ -13,14 +14,14 @@ const CLogout = () => {
     }
   };
   return (
-    <React.Fragment>
+    <div role={EDataTestId.CLogout}>
       <Button
         btnText="Logout"
         colorSchema={BtnColorSchema.SolidBgVioletTextWhite}
         isArrow={false}
         clickHandler={logoutHandler}
       />
-    </React.Fragment>
+    </div>
   );
 };
 export default CLogout;

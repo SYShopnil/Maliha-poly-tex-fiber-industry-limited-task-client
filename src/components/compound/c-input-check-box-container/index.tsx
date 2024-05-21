@@ -9,6 +9,7 @@ import { CAddTextInput } from "./c-add-text-input";
 import { CDynamicInputCheckBox } from "./c-dynamic-input-check-box";
 import { Button } from "@src/components/root";
 import { BtnColorSchema } from "@src/types/root";
+import { EDataTestId } from "@src/types/common";
 
 export const CInputCheckBoxContainer = ({
   existElement,
@@ -114,7 +115,7 @@ export const CInputCheckBoxContainer = ({
     );
   }, [elements]);
 
-  // DID THE DEAFULT POSITION TRACKER
+  // DID THE Default POSITION TRACKER
   useEffect(() => {
     const checkedPositionTracker: string[] = [];
     existElement?.length &&
@@ -127,7 +128,7 @@ export const CInputCheckBoxContainer = ({
   }, []);
 
   return (
-    <div>
+    <div role={EDataTestId.CAddNewText}>
       {/* will be hide in read mode */}
       {ECInputCheckBoxContainerMode.READ !== mode && (
         <CAddTextInput

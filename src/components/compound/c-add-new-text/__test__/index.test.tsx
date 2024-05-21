@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import { SProfile } from "..";
 import { EDataTestId } from "@src/types/common";
+import { CAddNewText } from "..";
 
-describe("When Profile has rendered", () => {
+describe("When Add New Text Component Rendered", () => {
   it("Expect render successfully", async () => {
-    render(await SProfile());
-    const myElement = screen.getByRole(EDataTestId.SProfile);
+    render(<CAddNewText />);
+    const myElement = screen.getByRole(EDataTestId.CAddNewText);
     expect(myElement).toMatchSnapshot();
   });
 });

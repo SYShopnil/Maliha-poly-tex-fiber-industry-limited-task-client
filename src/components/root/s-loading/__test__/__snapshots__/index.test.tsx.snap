@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When loading server component has rendered Expect render successfully 1`] = `
+<div
+  class="flex justify-center items-center h-[50vh]"
+  role="SLoading"
+>
+  <p
+    class="text-center font-extrabold text-2xl text-[#7F4D4F]"
+  >
+    Loading...
+  </p>
+</div>
+`;

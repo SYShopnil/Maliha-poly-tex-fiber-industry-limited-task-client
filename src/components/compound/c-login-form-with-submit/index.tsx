@@ -50,7 +50,7 @@ export const CLoginFormWithSubmit = () => {
   return (
     <div
       className="flex justify-center items-center h-[80vh] bg-gray-100"
-      data-testid={EDataTestId.cLoginFormWithSubmit}
+      role={EDataTestId.cLoginFormWithSubmit}
     >
       <form className="bg-white p-8 rounded shadow-md">
         <h2 className="text-2xl font-semibold mb-4 text-center">Login</h2>

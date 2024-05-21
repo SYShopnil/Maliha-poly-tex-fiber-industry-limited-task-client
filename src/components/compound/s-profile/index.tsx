@@ -11,7 +11,7 @@ export async function SProfile() {
     const { email, last_name, profile_pic, first_name, role } = loggedInUser;
     return (
       <div
-        data-testid={EDataTestId.SProfile}
+        role={EDataTestId.SProfile}
         className={`flex flex-col justify-center items-center space-y-5`}
       >
         <div
@@ -38,6 +38,6 @@ export async function SProfile() {
       </div>
     );
   } else {
-    return <div data-testid={EDataTestId.SProfile}>No User Found!!!</div>;
+    return <div role={EDataTestId.SProfile}>No User Found!!!</div>;
   }
 }

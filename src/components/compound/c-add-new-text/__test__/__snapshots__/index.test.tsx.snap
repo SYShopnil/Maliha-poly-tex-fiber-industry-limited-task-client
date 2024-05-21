@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When Add New Text Component Rendered Expect render successfully 1`] = `
+<div
+  role="CAddNewText"
+>
+  <div>
+    <span
+      class="cursor-pointer"
+      role="CButton"
+    >
+      <span
+        class="flex justify-center items-center  "
+      >
+        <span
+          class="text-base md:text-base_2  flex justify-center items-center px-[1rem] py-[0.5rem] rounded-[0.563rem] w-[100%] h-[100%] bg-[#EBF5EC] hover:bg-[#7F4D4F]  duration-[0.5s] text-[#7F4D4F] hover:text-[#EBF5EC]   border-[0.063rem] hover:border-[#EBF5EC] border-[#7F4D4F]   "
+        >
+          <span>
+            Add new Text List
+          </span>
+        </span>
+      </span>
+    </span>
+  </div>
+  <div />
+</div>
+`;

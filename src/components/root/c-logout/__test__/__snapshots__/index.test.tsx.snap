@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When Logout Component Has Rendered Expect render successfully 1`] = `
+<div
+  role="CLogout"
+>
+  <span
+    class="cursor-pointer"
+    role="CButton"
+  >
+    <span
+      class="flex justify-center items-center  "
+    >
+      <span
+        class="text-base md:text-base_2  flex justify-center items-center px-[1rem] py-[0.5rem] rounded-[0.563rem] w-[100%] h-[100%] bg-[#7A67EF] hover:bg-[transparent]  duration-[0.5s] text-[#FFFAFF] hover:text-[#7A67EF]  border-[0.063rem] border-primary_300 hover:border-[#7A67EF]   "
+      >
+        <span>
+          Logout
+        </span>
+      </span>
+    </span>
+  </span>
+</div>
+`;

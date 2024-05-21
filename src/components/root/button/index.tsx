@@ -10,6 +10,7 @@ import React, { useState, useEffect } from "react";
 import { SIconStore } from "../_icon";
 import { IconName } from "@src/types/root/_icon";
 import Link from "next/link";
+import { EDataTestId } from "@src/types/common";
 
 //Common layout
 const BaseButton = ({ btnText, colorSchema, isArrow }: IButton) => {
@@ -87,7 +88,7 @@ export const Button = (props: INormalButton) => {
       onClick={(
         e: React.MouseEvent<HTMLElement> | React.FormEvent<HTMLFormElement>
       ) => props.clickHandler?.(e)}
-      data-testid={props.dataTestId}
+      role={EDataTestId.CButton}
       className={`cursor-pointer`}
     >
       <BaseButton {...props} />

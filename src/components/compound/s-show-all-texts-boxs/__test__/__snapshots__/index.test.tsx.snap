@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When Input Check Box Component Rendered Expect render successfully 1`] = `
+<div
+  role="SShowAllTextBox"
+>
+  <div
+    class="flex justify-center items-center h-[50vh]"
+    role="SLoading"
+  >
+    <p
+      class="text-center font-extrabold text-2xl text-[#7F4D4F]"
+    >
+      Text Not Found Please Add...
+    </p>
+  </div>
+</div>
+`;

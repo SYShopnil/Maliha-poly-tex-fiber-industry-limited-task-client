@@ -7,6 +7,7 @@ import { ECInputCheckBoxContainerMode } from "@src/types/compound/c-input-check-
 import { BtnColorSchema } from "@src/types/root";
 import { Button } from "@src/components/root";
 import { addNewTextListServerAction } from "@src/lib/text-handler";
+import { EDataTestId } from "@src/types/common";
 
 export const CAddNewText = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,7 +27,7 @@ export const CAddNewText = () => {
     }
   };
   return (
-    <div>
+    <div role={EDataTestId.CAddNewText}>
       <div>
         <Button
           btnText="Add new Text List"
