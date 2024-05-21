@@ -19,7 +19,8 @@ export const CAddNewText = () => {
   const closeModal = () => setIsModalOpen(false);
   const createTextHandler = async (elements: ITextDataElements[]) => {
     try {
-      await addNewTextListServerAction(elements);
+      const response = await addNewTextListServerAction(elements);
+      !response && closeModal();
     } catch (err) {
       console.log(err);
     }

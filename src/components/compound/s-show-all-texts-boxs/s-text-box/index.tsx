@@ -31,11 +31,8 @@ export const STextBox = ({ elements, textId, total }: ITextBoxData) => {
       );
       if (!response) {
         setTimeout(() => {
-          // setUpdateButtonText("Updated!!");
           closeModal();
         }, 50);
-      } else {
-        // setUpdateButtonText("Update failed!!!");
       }
     } catch (err) {
       console.log(err);

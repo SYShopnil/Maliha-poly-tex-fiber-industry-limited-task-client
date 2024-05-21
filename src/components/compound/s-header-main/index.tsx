@@ -27,9 +27,8 @@ export async function SHeaderMain() {
       </div>
       <div className={`space-y-4 lg:space-y-2 flex-[1_1_15%] `}>
         <div>
-          <p className={`font-bold text-white text-lg`}>
-            {loggedInUser &&
-              `Hello ${loggedInUser.first_name} ${loggedInUser.last_name}`}
+          <p className={`font-bold text-white text-lg text-center`}>
+            {loggedInUser && `Hello ${loggedInUser.role.toUpperCase()}!!`}
           </p>
         </div>
         {isLoggedIn && <DynamicLogout />}
