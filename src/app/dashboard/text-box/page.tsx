@@ -1,6 +1,7 @@
 import { CAddNewText } from "@src/components/compound/c-add-new-text";
 import { SShowAllTextBox } from "@src/components/compound/s-show-all-texts-boxs";
 import { SLoading } from "@src/components/root";
+import { STextCardSkelton } from "@src/components/root/text-card-skletons";
 import { Suspense } from "react";
 
 export default async function TextBoxPage() {
@@ -12,7 +13,7 @@ export default async function TextBoxPage() {
         <CAddNewText />
       </section>
       <section className="pr-8 md:pr-5 lg:pr-0 pb-5">
-        <Suspense fallback={<SLoading text="Loading... Text box" />}>
+        <Suspense fallback={<STextCardSkelton />}>
           <SShowAllTextBox />
         </Suspense>
       </section>

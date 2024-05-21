@@ -14,20 +14,32 @@ export const STextBox = ({ elements, textId, total }: ITextBoxData) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeModalMode, setActiveModalMode] =
     useState<ECInputCheckBoxContainerMode>(ECInputCheckBoxContainerMode.READ);
+  const [updateBtnText, setUpdateButtonText] = useState<string>("Update");
   const openModal = (mode: ECInputCheckBoxContainerMode) => {
     setIsModalOpen(true);
     setActiveModalMode(mode);
   };
+
+  const closeModal = () => setIsModalOpen(false);
   const updateTextHandler = async (elements: ITextDataElements[]) => {
-    // console.log({ elements });
     try {
-      await updateTextListOfLoggedInUserServerAction(elements);
+      // setUpdateButtonText("Updating...");
+      const response = await updateTextListOfLoggedInUserServerAction(
+        elements,
+        textId
+      );
+      if (!response) {
+        setTimeout(() => {
+          // setUpdateButtonText("Updated!!");
+          closeModal();
+        }, 50);
+      } else {
+        // setUpdateButtonText("Update failed!!!");
+      }
     } catch (err) {
       console.log(err);
     }
   };
-  const closeModal = () => setIsModalOpen(false);
-
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200 col-span-12 md:col-span-6 lg:col-span-4">
       <p className="text-blue-600 font-bold mb-2">Text ID: {textId}</p>
@@ -40,7 +52,7 @@ export const STextBox = ({ elements, textId, total }: ITextBoxData) => {
           clickHandler={() => openModal(ECInputCheckBoxContainerMode.READ)}
         />
         <Button
-          btnText="Update"
+          btnText={updateBtnText}
           colorSchema={BtnColorSchema.SolidBgWhiteTextGreen}
           isArrow={false}
           clickHandler={() => openModal(ECInputCheckBoxContainerMode.UPDATE)}

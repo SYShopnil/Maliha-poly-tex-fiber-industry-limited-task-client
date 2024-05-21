@@ -33,7 +33,6 @@ export async function addNewTextListServerAction(
       };
     }
     const { status } = await res.json();
-    console.log({ status });
     if (status == 201) {
       redirectPath = "/dashboard/text-box";
     } else {
@@ -56,12 +55,61 @@ export async function addNewTextListServerAction(
 }
 
 export async function updateTextListOfLoggedInUserServerAction(
-  elements: ITextDataElements[]
+  elements: ITextDataElements[],
+  textId: string
 ) {
+  let redirectPath = "";
+  let positiveMessage = "";
   try {
-    console.log(elements);
+    const cookiesStore = cookies();
+    const getAuthToken = cookiesStore.get("auth"); //this toke should be a decrypted jwt token
+    const autToken = getAuthToken?.value && getAuthToken.value;
+    const res = await fetch(
+      `${process.env.SERVER_BASE_URL}/text/element/update`,
+      {
+        method: "POST",
+        credentials: "include",
+        body: JSON.stringify({ textId, payload: elements }),
+        headers: {
+          "content-type": "application/json",
+          Authorization: `${autToken}`, // Set the JWT token in the Authorization header
+        },
+      }
+    );
+    if (!res.ok) {
+      console.log(`error given`);
+      return {
+        message: "Fetch Error",
+        status: 401,
+      };
+    }
+    const { status, message: responseMessage } = await res.json();
+
+    if (status == 202) {
+      //all done successfully
+      redirectPath = "/dashboard/text-box";
+      positiveMessage = responseMessage;
+      return {
+        message: responseMessage,
+        status: 202,
+        modalClose: () => {},
+      };
+    } else {
+      return {
+        message: responseMessage,
+        status,
+      };
+    }
   } catch (err) {
+    console.log(err);
+    return {
+      message: "Internal error",
+      status: 501,
+    };
   } finally {
+    if (redirectPath) {
+      redirect(redirectPath);
+    }
   }
 }
 
