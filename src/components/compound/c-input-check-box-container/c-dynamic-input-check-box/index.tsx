@@ -1,18 +1,5 @@
-import { ITextDataElements } from "@src/types/compound/s-show-all-texts-boxs-type";
+import { ICDynamicInputCheckBox } from "@src/types/compound/c-input-check-box-container";
 import React from "react";
-
-interface ICDynamicInputCheckBox {
-  allSelectCheckBox: boolean;
-  handleAllSelectChecked: (checked: boolean) => void;
-  isReadOnly: boolean;
-  elements: ITextDataElements[];
-  handleCheckboxChange: (id: string, checked: boolean, ind: string) => void;
-  handleInputChange: (
-    id: string,
-    field: keyof ITextDataElements,
-    value: boolean | number
-  ) => void;
-}
 
 export const CDynamicInputCheckBox = ({
   allSelectCheckBox,

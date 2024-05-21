@@ -7,8 +7,8 @@ import React from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ATPL-Task",
-  description: "This is a job task of ATPL",
+  title: "Maliha-poly-tex-fiber-industry-limited-task",
+  description: "This is a job task of Maliha-poly-tex-fiber-industry-limited",
 };
 export const fetchCache = "force-no-store";
 export default function RootLayout({

@@ -1,12 +1,6 @@
 "use client";
+import { ICAddTextInput } from "@src/types/compound/c-input-check-box-container";
 import React from "react";
-
-interface ICAddTextInput {
-  inputCount: number;
-  setInputCount: React.Dispatch<React.SetStateAction<number>>;
-  isReadOnly: boolean;
-  addElements: () => void;
-}
 
 export const CAddTextInput = ({
   inputCount,
@@ -28,7 +22,7 @@ export const CAddTextInput = ({
           className="px-4 py-2 bg-blue-500 text-white rounded lg:col-span-4 col-span-8 lg:text-lg text-sm"
           onClick={addElements}
         >
-          Add Textboxes
+          Add To Text boxes
         </button>
       </div>
     </div>

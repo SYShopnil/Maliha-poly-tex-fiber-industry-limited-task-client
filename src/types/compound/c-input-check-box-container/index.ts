@@ -14,3 +14,23 @@ export interface ICInputCheckBoxContainer {
   btnText?: string;
   btnColorSchema?: BtnColorSchema;
 }
+
+export interface ICAddTextInput {
+  inputCount: number;
+  setInputCount: React.Dispatch<React.SetStateAction<number>>;
+  isReadOnly: boolean;
+  addElements: () => void;
+}
+
+export interface ICDynamicInputCheckBox {
+  allSelectCheckBox: boolean;
+  handleAllSelectChecked: (checked: boolean) => void;
+  isReadOnly: boolean;
+  elements: ITextDataElements[];
+  handleCheckboxChange: (id: string, checked: boolean, ind: string) => void;
+  handleInputChange: (
+    id: string,
+    field: keyof ITextDataElements,
+    value: boolean | number
+  ) => void;
+}

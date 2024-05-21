@@ -1,48 +1,6 @@
 import { cookies } from "next/headers";
-import { promises as fs } from "fs";
-import { IUser } from "@src/types/db/user";
-import {
-  IGetLoggedInUserResponse,
-  ISearchIndividualUserByEmailReturn,
-} from "@src/types/lib/user-handler";
 
-export async function searchIndividualUserByEmail(
-  email: string
-): Promise<ISearchIndividualUserByEmailReturn> {
-  return new Promise(async (resolve) => {
-    const getAllUserFromJsonDB = await getAllUsers();
-    if (getAllUserFromJsonDB) {
-      const getUserQueryByEmail = getAllUserFromJsonDB.find((user) => {
-        return user.email == email;
-      });
-      if (getUserQueryByEmail) {
-        resolve({
-          message: "",
-          status: 202,
-          payload: {
-            user: getUserQueryByEmail,
-          },
-        });
-      } else {
-        resolve({
-          message: "",
-          status: 404,
-          payload: {
-            user: null,
-          },
-        });
-      }
-    } else {
-      resolve({
-        message: "",
-        status: 404,
-        payload: {
-          user: null,
-        },
-      });
-    }
-  });
-}
+import { IGetLoggedInUserResponse } from "@src/types/lib/user-handler";
 
 export async function getLoggedInUser(): Promise<IGetLoggedInUserResponse> {
   try {
@@ -86,20 +44,4 @@ export async function getLoggedInUser(): Promise<IGetLoggedInUserResponse> {
       },
     };
   }
-}
-
-export async function getAllUsers(): Promise<IUser[] | null> {
-  return new Promise(async (resolve) => {
-    const parseUserFromJsonDB: IUser[] = JSON.parse(
-      await fs.readFile(
-        process.cwd() + "/public/static/db/user.db.json",
-        "utf8"
-      )
-    );
-    if (parseUserFromJsonDB) {
-      resolve(parseUserFromJsonDB);
-    } else {
-      resolve(null);
-    }
-  });
 }

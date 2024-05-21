@@ -1,22 +1,14 @@
 "use client";
-import React, { useState, useEffect, ReactNode } from "react";
-
-interface IModal {
-  show: boolean;
-  onClose: () => void;
-  children: ReactNode;
-}
+import { IModal } from "@src/types/root/c-modal";
+import React, { useState, useEffect } from "react";
 
 export const CModal = ({ show, onClose, children }: IModal) => {
   const [isVisible, setIsVisible] = useState(show);
   const [shouldAnimate, setShouldAnimate] = useState(false);
-  // console.log(`render outside`);
-  // console.log({ shouldAnimate, isVisible, show });
   useEffect(() => {
     if (show) {
       setIsVisible(true);
       setTimeout(() => setShouldAnimate(true), 200); // Duration of the fade-in animation
-      //   setShouldAnimate(true);
     } else {
       setTimeout(() => setShouldAnimate(false), 200); // Duration of the fade-out animation
       setTimeout(() => setIsVisible(false), 200); // Duration of the fade-out animation

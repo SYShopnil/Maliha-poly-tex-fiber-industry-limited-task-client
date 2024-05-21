@@ -1,6 +1,5 @@
 import { CAddNewText } from "@src/components/compound/c-add-new-text";
 import { SShowAllTextBox } from "@src/components/compound/s-show-all-texts-boxs";
-import { SLoading } from "@src/components/root";
 import { STextCardSkelton } from "@src/components/root/text-card-skletons";
 import { Suspense } from "react";
 

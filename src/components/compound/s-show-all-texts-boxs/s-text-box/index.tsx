@@ -14,7 +14,8 @@ export const STextBox = ({ elements, textId, total }: ITextBoxData) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeModalMode, setActiveModalMode] =
     useState<ECInputCheckBoxContainerMode>(ECInputCheckBoxContainerMode.READ);
-  const [updateBtnText, setUpdateButtonText] = useState<string>("Update");
+
+  const updateBtnText = "Update";
   const openModal = (mode: ECInputCheckBoxContainerMode) => {
     setIsModalOpen(true);
     setActiveModalMode(mode);

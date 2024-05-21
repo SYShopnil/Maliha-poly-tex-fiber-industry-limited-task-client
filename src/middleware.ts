@@ -4,10 +4,7 @@ import { cookies } from "next/headers";
 const authProtectedRoute = [
   "/dashboard",
   "/dashboard/profile",
-  "/dashboard/userList",
-  "/dashboard/products",
-  "/dashboard/products/[id]",
-  "",
+  "/dashboard/text-box",
 ];
 const afterAuthProtectedRoute = ["/login"];
 export function middleware(request: NextRequest) {

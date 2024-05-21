@@ -1,9 +1,4 @@
-interface ISProfileDetails {
-  userName: string;
-  gender: string;
-  userType: string;
-  email: string;
-}
+import { ISProfileDetails } from "@src/types/compound/s-profile";
 
 export function SProfileDetails({
   email,

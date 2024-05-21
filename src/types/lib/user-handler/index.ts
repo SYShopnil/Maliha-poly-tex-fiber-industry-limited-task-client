@@ -1,10 +1,15 @@
 import { ICommonReturnData } from "@src/types/common";
-import { IUser } from "@src/types/db/user";
 
-export interface ISearchIndividualUserByEmailReturn extends ICommonReturnData {
-  payload: {
-    user: IUser | null;
-  };
+interface IUser {
+  user_id: string;
+  first_name: string;
+  email: string;
+  role: string;
+  profile_pic: string;
+  last_name: string;
+  create_at: string;
+  update_at: string;
+  is_active: true;
 }
 
 export interface IGetLoggedInUserResponse extends ICommonReturnData {

@@ -1,5 +1,4 @@
 import React from "react";
-import { demoData } from "./config";
 import { STextBox } from "./s-text-box";
 import { getAllLoggedInUserTextListFromServer } from "@src/lib/text-handler";
 import { SLoading } from "@src/components/root";
