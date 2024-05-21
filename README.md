@@ -23,6 +23,15 @@
   <img src = "public/doc/demo/create_new_text.png"  >
 
 - **Update existing card element with add new or delete also**
+
+```
+  Use Cases
+    1. User can update exist element only.
+    2. User can update existing one and add more element also.
+    3. User can deleted existing one and also can update remains element.
+
+```
+
   <img src = "public/doc/demo/update_text_element.png">
 
 - **View individual text element details**
@@ -47,6 +56,12 @@ Install dependencies
 
 ```bash
   npm install || npm i
+```
+
+Get .ENV file
+
+```bash
+  cp .env.example .env
 ```
 
 Start the server
