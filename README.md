@@ -23,10 +23,10 @@
   <img src = "public/doc/demo/create_new_text.png"  >
 
 - **Update existing card element with add new or delete also**
-  <img src = "public/doc/demo/update_text_element.png >
+  <img src = "public/doc/demo/update_text_element.png">
 
 - **View individual text element details**
-  <img src = "public/doc/demo/read_text_element.png >
+  <img src = "public/doc/demo/read_text_element.png">
 
 ## Run Locally
 
